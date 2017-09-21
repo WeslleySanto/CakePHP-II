@@ -6,6 +6,7 @@
             <th>#</th>
             <th>Nome</th>
             <th>Preço</th>
+            <th>Preço com Desconto</th>
             <th>Descrição</th>
         </tr>
     </thead>
@@ -15,6 +16,7 @@
             <td><?=$produto['id']?></td>
             <td><?=$produto['nome']?></td>
             <td><?=$this->Money->format($produto['preco'])?></td>
+            <td><?=$this->Money->format($produto->calculaDesconto())?></td>
             <td><?=$produto['descricao']?></td>
         </tr>
         <?php endforeach;?>
