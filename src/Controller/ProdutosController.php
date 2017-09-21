@@ -2,13 +2,17 @@
 
 namespace App\Controller;
 
+use Cake\ORM\TableRegistry;
+
 class ProdutosController extends AppController{
     
     public function index(){
         
-        $msg = "Ola, Mundo!";
+        $produtosTable = TableRegistry::get('Produtos');
         
-        $this->set('msg', $msg);
+        $produtos = $produtosTable->find('all');
+        
+        $this->set('produtos', $produtos);
     }//FINAL FUNCTION index
     
 }//FINAL CLASS ProdutosController
