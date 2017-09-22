@@ -21,6 +21,9 @@
             <td><?=$produto['descricao']?></td>
             <td>
                 <?= $this->Html->Link('Editar', array('controller' => 'produtos', 'action' => 'editar', $produto['id'])) ?>
+                <?= $this->Form->postLink('Deletar', array('controller' => 'produtos', 'action' => 'deletar', $produto['id']), 
+                    ['confirm' => "Deseja realmente deletar o produto {$produto['nome']}?"]
+                    ) ?>
             </td>
         </tr>
         <?php endforeach;?>

@@ -37,7 +37,23 @@ class ProdutosController extends AppController{
         
         $this->render('novo');
         
-    }// FINAL FUNCTION editar
+    }// FINAL FUNCTION editar 
+    
+    public function deletar($id){
+        
+        $produtosTable = TableRegistry::get('Produtos');
+        
+        $produto = $produtosTable->get($id);
+        
+        if($produtosTable->delete($produto)){
+            $msg = 'Produto removido com sucesso!';
+        }else{
+            $msg = 'Erro ao deletar o produto!';
+        }
+        
+        $this->redirect('Produtos/index');
+        
+    }// FINAL FUNCTION deletar
     
     public function salva(){
         
@@ -53,7 +69,7 @@ class ProdutosController extends AppController{
         
         $this->set('msg', $msg);
         
-    }
+    }//FINAL FUNCTION salva
     
 }//FINAL CLASS ProdutosController
 
