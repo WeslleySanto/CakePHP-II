@@ -1,4 +1,5 @@
-<?= $this->Html->Link('+ Novo Produto', array('controller' => 'produtos', 'action' => 'novo')) ?>
+<?= $this->Html->Link('+ Novo Produto', ['controller' => 'produtos', 'action' => 'novo']) ?>
+<?= $this->Html->Link('Sair', ['controller' => 'users', 'action' => 'logout']) ?>
 
 <table class="table">
     <thead>
