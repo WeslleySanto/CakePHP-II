@@ -47,10 +47,11 @@ class ProdutosController extends AppController{
         
         if($produtosTable->delete($produto)){
             $msg = 'Produto removido com sucesso!';
+            $this->Flash->set($msg, ['element' => 'error']);
         }else{
             $msg = 'Erro ao deletar o produto!';
+            $this->Flash->set($msg);
         }
-        
         $this->redirect('Produtos/index');
         
     }// FINAL FUNCTION deletar
@@ -63,11 +64,13 @@ class ProdutosController extends AppController{
         
         if($produtosTable->save($produto)){
             $msg = 'Produto salvo com sucesso!';
+            $this->Flash->set($msg, ['element' => 'success']);
         }else{
             $msg = 'Erro ao salvar o produto!';
+            $this->Flash->set($msg, ['element' => 'error']);
         }
         
-        $this->set('msg', $msg);
+        $this->redirect('Produtos/index');
         
     }//FINAL FUNCTION salva
     
