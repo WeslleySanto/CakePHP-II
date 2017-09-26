@@ -68,15 +68,15 @@ class ProdutosController extends AppController{
         
         $produto = $produtosTable->newEntity($this->request->data());
         
-        if($produtosTable->save($produto)){
+        if(!$produto->errors() && $produtosTable->save($produto)){
             $msg = 'Produto salvo com sucesso!';
             $this->Flash->set($msg, ['element' => 'success']);
         }else{
             $msg = 'Erro ao salvar o produto!';
             $this->Flash->set($msg, ['element' => 'error']);
         }
-        
-        $this->redirect('Produtos/index');
+        $this->set('produto', $produto);
+        $this->render('novo');
         
     }//FINAL FUNCTION salva
     
