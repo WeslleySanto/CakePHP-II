@@ -6,8 +6,14 @@ use Cake\ORM\TableRegistry;
 
 class ProdutosController extends AppController{
     
-    public function __contructor(){
-        $produtosTable = TableRegistry::get('Produtos');
+    public $paginate = [
+        'limit' => 2
+        ];
+    
+    public function initialize(){
+        parent::initialize();
+        
+        $this->loadComponent('Paginator');
     }
     
     public function index(){
@@ -16,7 +22,7 @@ class ProdutosController extends AppController{
         
         $produtos = $produtosTable->find('all');
         
-        $this->set('produtos', $produtos);
+        $this->set('produtos', $this->paginate($produtos));
     }//FINAL FUNCTION index
     
     public function novo(){

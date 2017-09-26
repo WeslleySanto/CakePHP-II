@@ -30,3 +30,13 @@
         <?php endforeach;?>
     </tbody>
 </table>
+<div class="paginator">
+    <ul class="pagination">
+        
+    <?php
+        echo $this->Paginator->prev('Voltar');
+        echo $this->Paginator->numbers();
+        echo $this->Paginator->next('Avançar');
+    ?>
+    </ul>
+</div>
