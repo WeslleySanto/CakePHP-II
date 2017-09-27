@@ -14,6 +14,7 @@ class ProdutosController extends AppController{
         parent::initialize();
         
         $this->loadComponent('Paginator');
+        $this->loadComponent('Csrf');
     }
     
     public function index(){
