@@ -10,9 +10,9 @@ class ContatoController extends AppController{
             $retorno_envio = $contato->execute($this->request->data());
             
             if($retorno_envio){
-                $this->Flash->set('Email enviado com sucesso', ['element' => 'success']);
+                $this->Flash->set(__('Email enviado com sucesso'), ['element' => 'success']);
             }else{
-                $this->Flash->set('Problema ao enviar o e-mail', ['element' => 'error']);
+                $this->Flash->set(__('Problema ao enviar o e-mail'), ['element' => 'error']);
             }
         }
         $this->set('contato', $contato);

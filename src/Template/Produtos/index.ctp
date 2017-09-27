@@ -1,15 +1,15 @@
-<?= $this->Html->Link('+ Novo Produto', ['controller' => 'produtos', 'action' => 'novo']) ?>
-<?= $this->Html->Link('Sair', ['controller' => 'users', 'action' => 'logout']) ?>
+<?= $this->Html->Link(__('+ Novo Produto'), ['controller' => 'produtos', 'action' => 'novo']) ?>
+<?= $this->Html->Link(__('Sair'), ['controller' => 'users', 'action' => 'logout']) ?>
 
 <table class="table">
     <thead>
         <tr>
             <th>#</th>
-            <th>Nome</th>
-            <th>Preço</th>
-            <th>Preço com Desconto</th>
-            <th>Descrição</th>
-            <th>Ações</th>
+            <th><?=__('Nome')?></th>
+            <th><?=__('Preço')?></th>
+            <th><?=__('Preço com Desconto')?></th>
+            <th><?=__('Descrição')?></th>
+            <th><?=__('Ações')?></th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
             <td>
                 <?= $this->Html->Link('Editar', array('controller' => 'produtos', 'action' => 'editar', $produto['id'])) ?>
                 <?= $this->Form->postLink('Deletar', array('controller' => 'produtos', 'action' => 'deletar', $produto['id']), 
-                    ['confirm' => "Deseja realmente deletar o produto {$produto['nome']}?"]
+                    ['confirm' => __('Deseja realmente deletar o produto') . $produto['nome'] . '?']
                     ) ?>
             </td>
         </tr>
@@ -34,9 +34,9 @@
     <ul class="pagination">
         
     <?php
-        echo $this->Paginator->prev('Voltar');
+        echo $this->Paginator->prev(__('Voltar'));
         echo $this->Paginator->numbers();
-        echo $this->Paginator->next('Avançar');
+        echo $this->Paginator->next(__('Avançar'));
     ?>
     </ul>
 </div>

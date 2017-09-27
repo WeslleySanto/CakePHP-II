@@ -52,10 +52,10 @@ class ProdutosController extends AppController{
         $produto = $produtosTable->get($id);
         
         if($produtosTable->delete($produto)){
-            $msg = 'Produto removido com sucesso!';
+            $msg = __('Produto removido com sucesso!');
             $this->Flash->set($msg, ['element' => 'error']);
         }else{
-            $msg = 'Erro ao deletar o produto!';
+            $msg = __('Erro ao deletar o produto!');
             $this->Flash->set($msg);
         }
         $this->redirect('Produtos/index');
@@ -69,10 +69,10 @@ class ProdutosController extends AppController{
         $produto = $produtosTable->newEntity($this->request->data());
         
         if(!$produto->errors() && $produtosTable->save($produto)){
-            $msg = 'Produto salvo com sucesso!';
+            $msg = __('Produto salvo com sucesso!');
             $this->Flash->set($msg, ['element' => 'success']);
         }else{
-            $msg = 'Erro ao salvar o produto!';
+            $msg = __('Erro ao salvar o produto!');
             $this->Flash->set($msg, ['element' => 'error']);
         }
         $this->set('produto', $produto);

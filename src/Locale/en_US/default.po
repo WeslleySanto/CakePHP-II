@@ -1,0 +1,98 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-09-27 00:35+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/ContatoController.php:13
+msgid "Email enviado com sucesso"
+msgstr "Email successfully sent"
+
+#: Controller/ContatoController.php:15
+msgid "Problema ao enviar o e-mail"
+msgstr "Problem sending email"
+
+#: Controller/ProdutosController.php:55
+msgid "Produto removido com sucesso!"
+msgstr "Product successfully removed!"
+
+#: Controller/ProdutosController.php:58
+msgid "Erro ao deletar o produto!"
+msgstr "Error deleting the product!"
+
+#: Controller/ProdutosController.php:72
+msgid "Produto salvo com sucesso!"
+msgstr "Product successfully saved!"
+
+#: Controller/ProdutosController.php:75
+msgid "Erro ao salvar o produto!"
+msgstr "Error saving product!"
+
+#: Template/Layout/error.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Produtos/index.ctp:1
+msgid "+ Novo Produto"
+msgstr "+ New product"
+
+#: Template/Produtos/index.ctp:2
+msgid "Sair"
+msgstr "logout"
+
+#: Template/Produtos/index.ctp:8
+msgid "Nome"
+msgstr "Name"
+
+#: Template/Produtos/index.ctp:9
+msgid "Preço"
+msgstr "Price"
+
+#: Template/Produtos/index.ctp:10
+msgid "Preço com Desconto"
+msgstr "Discount price"
+
+#: Template/Produtos/index.ctp:11
+msgid "Descrição"
+msgstr "Description"
+
+#: Template/Produtos/index.ctp:12
+msgid "Ações"
+msgstr "Actions"
+
+#: Template/Produtos/index.ctp:26
+msgid "Deseja realmente deletar o produto"
+msgstr "Do you really want to delete the product"
+
+#: Template/Produtos/index.ctp:37
+msgid "Voltar"
+msgstr "Previous"
+
+#: Template/Produtos/index.ctp:39
+msgid "Avançar"
+msgstr "Next"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr ""
+
